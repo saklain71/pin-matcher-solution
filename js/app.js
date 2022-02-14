@@ -27,3 +27,31 @@ document.getElementById('key-pad').addEventListener('click', function(event){
 
         }
 })
+function verifyPin(){
+    const pinInput = document.getElementById('typed-numbers').value;
+    const displayPin = document.getAnimations('display-pin').value;
+    const failMEssage = document.getElementById('notify-fail');
+    const successMessage = document.getElementById('notify-success');
+    if ( pinInput == displayPin){
+       successMessage.style.display = 'block';
+       
+    }
+    else{
+        failMEssage.style.display = 'block';
+    }
+}
+
+function verifyPin() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const successMessage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    if (pin == typedNumbers) {
+        successMessage.style.display = 'block';
+        failError.style.display = 'none';
+    }
+    else {
+        failError.style.display = 'block';
+        successMessage.style.display = 'none';
+    }
+}
